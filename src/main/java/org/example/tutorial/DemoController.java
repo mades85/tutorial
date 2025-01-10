@@ -42,8 +42,10 @@ public class DemoController {
             customer.setFirstName(first);
             customer.setLastName(last);
             customerRepository.save(customer);
+            return "Customer updated!" + customer.getFirstName() + " " + customer.getLastName() + " " + customer.getId();
         }
 
-        return "Customer updated!" + customer.getFirstName() + " " + customer.getLastName() + " " + customer.getId();
+        return "Customer not found!";
+
     }
 }
